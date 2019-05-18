@@ -23,10 +23,14 @@ app.get('/about', (req, res) => {
   res.status(200).render('about', {title: 'About'});
 });
 
+app.get('/api', (req, res) => {
+  res.status(200).render('api', {title: 'API'});
+});
+
 app.use('/link', require(path.join(__dirname, 'routers', 'link')));
 
-app.get('*', (req, res) => {
-  res.status(404).render('404', {title: '404 Error', url: req.url});
+app.all('*', (req, res) => {
+  res.status(404).render('404', {title: '404 Error', url: req.url, method: req.method});
 });
 
 app.listen(PORT, () => {
