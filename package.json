@@ -10,6 +10,7 @@
   "keywords": [],
   "author": "Seif Mansour",
   "license": "MIT",
+  "repository": "github:GamesProSeif/weblinks",
   "dependencies": {
     "ejs": "^2.6.1",
     "express": "^4.17.0",
