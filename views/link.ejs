@@ -1,0 +1,8 @@
+<%- include('layouts/header'); -%>
+<ul class="list-group">
+  <% links.forEach(link => { %>
+    <%- include('link-show', {link: link}); %>
+  <% }); %>
+</ul>
+<div class="mb-4"></div>
+<%- include('layouts/footer'); -%>
