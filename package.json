@@ -1,7 +1,7 @@
 {
   "name": "weblinks-downloader",
   "version": "1.0.0",
-  "description": "",
+  "description": "Downloading links made simpler",
   "main": "index.js",
   "scripts": {
     "start": "node .",
