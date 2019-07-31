@@ -24,7 +24,6 @@ router.post('/', (req, res, next) => {
       }
 
       res.status(200).render('link', {title: 'Links', links});
-      next();
     } catch (e) {
       console.log(e);
       res.status(404).send('An error occured');

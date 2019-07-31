@@ -1,8 +1,20 @@
 <%- include('layouts/header'); -%>
-<ul class="list-group">
-  <% links.forEach(link => { %>
-    <%- include('link-show', {link: link}); %>
-  <% }); %>
-</ul>
+<div class="card">
+  <div class="card-header">
+    <h3>The Header</h3>
+  </div>
+  <div class="card-body">
+    <ul class="list-group">
+      <% links.forEach(link => { %>
+        <li class="list-group-item">
+          <a href="<%- link.href %>" target="_blank" title="<%- link.name %>">
+            <%- link.name.length > 20 ? link.name.substr(0, 20) + "..." : link.name %>
+          </a>
+        </li>
+        <% }); %>
+      </ul>
+      <button type="button" class="btn btn-primary mt-4 text-right" name="download" id="download">Download</button>
+  </div>
+</div>
 <div class="mb-4"></div>
 <%- include('layouts/footer'); -%>
